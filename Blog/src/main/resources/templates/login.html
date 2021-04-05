@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!doctype html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
@@ -25,7 +19,7 @@ and open the template in the editor.
             </div>
             <hr/>
             <h2>Login Page</h2>
-            <div sec:authorize="isAuthenticated()">
+ <div sec:authorize="isAuthenticated()">
                 <form class="form-inline"
                       method="POST"
                       action="/logout">
@@ -40,15 +34,12 @@ and open the template in the editor.
                             id="submit"
                             type="submit">Logout</button>
                 </form>
-            </div>
+            </div>      
             <h3 th:if="${#request.getParameter('login_error') == '1'}">
                 Wrong Username or Password</h3>
             <div class="row col-5 my-4 border border-dark">
                 <div class="row col m-3">
-                    <form class="form-horizontal"
-                          role="form"
-                          method="post"
-                          action="login">
+                    <form class="form-horizontal" role="form" method="post" action="login">
                         <div class="form-group">
                             <label for="username" class="col-md-4 control-label">Username:</label>
                             <div class="col-md-8">

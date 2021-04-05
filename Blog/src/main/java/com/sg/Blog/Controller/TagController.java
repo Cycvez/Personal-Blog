@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sg.Blog.controller;
+package com.sg.Blog.Controller;
 
 import com.sg.Blog.dao.ContentDao;
 import com.sg.Blog.dao.TagDao;
